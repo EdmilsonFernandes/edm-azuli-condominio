@@ -194,7 +194,7 @@ namespace Azuli.Web.Portal
 
             lblChurras.Visible = true;
             //btnConfirmaChurras.Visible = true;
-            //btnCancelarChurras.Visible = true;
+             btnCancelarChurras.Visible = true;
             //lblDiasAtrasoChurras.Visible = true;
             //lblValorChurras.Visible = true;
 
@@ -219,7 +219,7 @@ namespace Azuli.Web.Portal
 
             lblSalaoFesta.Visible = true;
             //btnConfirmaSalao.Visible = true;
-            //btnCancelaFesta.Visible = true;
+            btnCancelaFesta.Visible = true;
             //lblDiasAtrasoFesta.Visible = true;
             //lblValorFesta.Visible = true;
 
