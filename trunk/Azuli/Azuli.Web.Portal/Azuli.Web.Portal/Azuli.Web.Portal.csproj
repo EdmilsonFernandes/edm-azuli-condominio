@@ -153,6 +153,7 @@
     <Content Include="GerarReciboAzuliAdm.aspx" />
     <Content Include="gerenciamentoMoradorAdm.aspx" />
     <Content Include="GerenciarClassificadoMorador.aspx" />
+    <Content Include="historicoAgendaCondomino.aspx" />
     <Content Include="HistoricoCancelamento.aspx" />
     <Content Include="images\0ae1500.jpg" />
     <Content Include="images\add.png" />
@@ -630,6 +631,13 @@
     </Compile>
     <Compile Include="GerenciarClassificadoMorador.aspx.designer.cs">
       <DependentUpon>GerenciarClassificadoMorador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="historicoAgendaCondomino.aspx.cs">
+      <DependentUpon>historicoAgendaCondomino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="historicoAgendaCondomino.aspx.designer.cs">
+      <DependentUpon>historicoAgendaCondomino.aspx</DependentUpon>
     </Compile>
     <Compile Include="HistoricoCancelamento.aspx.cs">
       <DependentUpon>HistoricoCancelamento.aspx</DependentUpon>

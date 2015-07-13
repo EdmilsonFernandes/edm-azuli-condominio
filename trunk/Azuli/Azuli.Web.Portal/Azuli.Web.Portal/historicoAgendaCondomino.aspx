@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAdmin.Master" AutoEventWireup="true" CodeBehind="HistoricoCancelamento.aspx.cs" Inherits="Azuli.Web.Portal.HistoricoCancelamento" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="historicoAgendaCondomino.aspx.cs" Inherits="Azuli.Web.Portal.historicoAgendaCondomino" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <fieldset id="Fieldset1" class="login" runat="server"> 
+<fieldset id="Fieldset1" class="login" runat="server"> 
         <legend class="accordionContent">Histórico de cancelamentos: </legend>
         <br />
       <div id="dvReservaMes" runat="server" align="left">
@@ -82,3 +82,5 @@
 </asp:SqlDataSource>
    
 </asp:Content>
+
+

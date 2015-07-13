@@ -17,7 +17,9 @@
     <siteMapNode  title="Reservas" description="Reservas">
       <siteMapNode url="~/telaAgendamento.aspx" title="Calendário" description="" />
       <siteMapNode url="~/minhaReservas.aspx" title="Minhas Reservas" description="" />
-      <siteMapNode url="~/ReservaDetalhadaMoradores.aspx" title="Reservas Geral Confirmadas" description="" />
+      <siteMapNode url="~/ReservaDetalhadaMoradores.aspx" title="Reservas do Condominio" description="" />
+      <siteMapNode url="~/HistoricoCancelamento.aspx" title="Reservas Canceladas " description="" />
+
 
     </siteMapNode>
 
