@@ -30,6 +30,14 @@ namespace Azuli.Web.Portal.Util
 
         }
 
+        public enum statusPesquisa
+        {
+            bloco = "B",
+            apartamento = "A",
+            blocoApartamento = "BA",
+            nome = "N"
+
+        }
 
         public enum statusChamado
         {

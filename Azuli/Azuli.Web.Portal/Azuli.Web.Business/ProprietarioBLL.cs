@@ -60,7 +60,23 @@ namespace Azuli.Web.Business
             }
         }
 
-       
+
+        public Model.listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap)
+        {
+            try
+            {
+
+                return oPropriDAO.PesquisaMorador(tipo_busca, pesquisa_nome, ap);
+
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+
+
 
 
         public Model.listApartamento listaAP(System.Data.DataTable dt)

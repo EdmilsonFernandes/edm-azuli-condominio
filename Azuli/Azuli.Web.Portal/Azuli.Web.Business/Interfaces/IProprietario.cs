@@ -19,6 +19,7 @@ namespace Azuli.Web.Business.Interfaces
         listProprietario recuperaSenhaMorador(ProprietarioModel ap);
         void liberaAcesso(ApartamentoModel ap);
         listProprietario enviaCrendencialAcesso(ApartamentoModel oPropri);
+        listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap);
 
     }
 

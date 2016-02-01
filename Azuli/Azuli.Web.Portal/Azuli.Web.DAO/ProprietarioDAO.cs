@@ -107,6 +107,34 @@ namespace Azuli.Web.DAO
                 throw;
             }
         }
+
+        public listProprietario PesquisaMorador(string tipo_busca, string pesquisa_nome, ApartamentoModel ap)
+        {
+            string clausulaSQL = "SP_BUSCA_MORADOR";
+
+            try
+            {
+
+                SqlCommand comandoSQL = new SqlCommand(clausulaSQL);
+                comandoSQL.Parameters.AddWithValue("@TIPO_BUSCA", tipo_busca);
+                comandoSQL.Parameters.AddWithValue("@BUSCA_NOME", pesquisa_nome);
+                comandoSQL.Parameters.AddWithValue("@VALOR_APTO", ap.apartamento);
+                comandoSQL.Parameters.AddWithValue("@VALOR_BLOCO", ap.bloco);
+
+                DataTable tbProprietario = new DataTable();
+
+                tbProprietario = ExecutaQuery(comandoSQL);
+
+                return listaAp(tbProprietario);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public listProprietario enviaCrendencialAcesso(ApartamentoModel oPropri)
         {
             string clausulaSQL = "SP_ENVIA_SENHA_MORADOR";
@@ -132,6 +160,9 @@ namespace Azuli.Web.DAO
                 throw;
             }
         }
+
+
+
 
     
         public void liberaAcesso(ApartamentoModel ap)

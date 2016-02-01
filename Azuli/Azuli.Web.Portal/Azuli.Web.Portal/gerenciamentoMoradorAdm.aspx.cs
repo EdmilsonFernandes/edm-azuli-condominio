@@ -19,7 +19,9 @@ namespace Azuli.Web.Portal
         ProprietarioBLL oProprietario = new ProprietarioBLL();
         ProprietarioModel oProprietarioModel = new ProprietarioModel();
         ApartamentoModel oAPmodel = new ApartamentoModel();
+        listProprietario oListProprietario =  new listProprietario();
         Util.Util oUtil = new Util.Util();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -124,6 +126,57 @@ namespace Azuli.Web.Portal
         protected void ibtSearch_Click(object sender, ImageClickEventArgs e)
         {
 
+            oProprietarioModel.ap = new ApartamentoModel();
+          
+            if (txtCond01.text != string.Empty)
+            {
+                oAPmodel.apartamento = null;
+                oAPmodel.bloco = null;
+                oProprietarioModel.ap = oAPmodel;
+                oListaProprietario = oProprietario.PesquisaMorador(oUtil.statusPesquisa.nome, txtCond01.text.Trim(), oProprietarioModel);
+                preencheGridViewByPesquisa(oProprietari);
+
+            }
+            else if (txtBloco.text != string.Empty && txtAP.text == string.Empty )
+            {
+                oAPmodel.apartamento = null;
+                oAPmodel.bloco = txtBloco.text;
+                oProprietarioModel.ap = oAPmodel;
+                oListaProprietario = oProprietario.PesquisaMorador(oUtil.statusPesquisa.bloco, null, oProprietarioModel);
+                preencheGridViewByPesquisa(oProprietari);
+
+            }
+            else if (txtBloco.text == string.Empty && txtAP.text != string.Empty)
+            {
+
+                oAPmodel.apartamento = txtAP.text;
+                oAPmodel.bloco = null;
+                oProprietarioModel.ap = oAPmodel;
+                oListaProprietario = oProprietario.PesquisaMorador(oUtil.statusPesquisa.apartamento, null, oProprietarioModel);
+                preencheGridViewByPesquisa(oProprietari);
+
+            }
+            else if (txtBloco.text != string.Empty && txtAP.text != string.Empty)
+            {
+
+                oAPmodel.apartamento = txtAP.text;
+                oAPmodel.bloco = txtBloco.text; ;
+                oProprietarioModel.ap = oAPmodel;
+                oListaProprietario oProprietari =o.PesquisaMorador(oUtil.statusPesquisa.blocoApartamento, null, oProprietarioModel);
+
+                preencheGridViewByPesquisa(oProprietari);
+
+            }
+
+
+
+
+        }
+
+        public void preencheGridViewByPesquisa(listProprietario oList)
+        {
+            grdGerenciamentoMoradores.DataSource = oList;
+            grdGerenciamentoMoradores.DataBind();
         }
 
         protected void txtEmail_TextChanged(object sender, EventArgs e)
